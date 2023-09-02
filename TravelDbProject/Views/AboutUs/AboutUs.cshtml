@@ -1,0 +1,79 @@
+﻿@using TravelDbProject.Models.Classes
+@model List<AboutUs>
+@{
+    ViewBag.Title = "AboutUs";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+@*<!DOCTYPE HTML>
+    <html>
+    <head>
+        <title>Free Easy-Trip Website Template | About :: w3layouts</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="~/web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    </head>
+    <body>*@
+@*<div class="header">
+        <div class="wrap">
+            <div class="logo"><a href="~/web/index.html"><img src="~/web/images/logo.png" alt="" /></a></div>
+            <div class="con-right">
+                <div class="grid1-l-img">
+                    <img src="~/web/images/contact.png" alt="">
+                </div>
+                <div class="grid1-l-desc">
+                    <p>Contact : +91 00000-55555</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="wrap">
+            <ul id="nav">
+                <li><a href="~/web/index.html">Home</a></li>
+                <li><a class="hsubs" href="~/web/about.html">About</a></li>
+                <li>
+                    <a class="hsubs" href="~/web/destinations.html">Destinations</a>
+                    <ul class="subs">
+                        <li><a href="#">Hotels</a></li>
+                        <li><a href="#">Restaurants</a></li>
+                        <li><a href="#">Beach Resorts</a></li>
+                    </ul>
+                </li>
+                <li><a class="hsubs" href="~/web/destinations.html">Free Travel Guides</a></li>
+                <li><a href="~/web/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>*@
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>About</h3>
+            @foreach (var x in Model)
+            {
+                <img src="@x.Photo" alt="Alternate Text" />
+                <h4>@x.Description</h4>
+            }
+            @*<img src="~/web/images/about_banner.jpg" alt="" />*@
+        </div>
+    </div>
+</div>
+<br />
+<style>
+   .wrap .about img{
+        width:950px;
+        height:500px;
+    }
+</style>
+@*<div class="footer-bottom">
+        <div class="wrap">
+            <div class="copy">
+                <p>&copy; 2013 Easy-Trip. All Rights Reserved | Design by <a href="http://w3layouts.com">W3Layouts</a></p>
+            </div>
+        </div>
+    </div>*@
+@*</body>
+    </html>*@

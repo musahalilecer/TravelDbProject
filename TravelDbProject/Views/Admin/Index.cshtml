@@ -1,0 +1,30 @@
+﻿@using TravelDbProject.Models.Classes
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Blog listesi</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <td>ID</td>
+        <td>Tittle</td>
+        <td>Delete</td>
+        <td>Update</td>
+        <td>Detail</td>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.BlogTittle</td>
+            <td><a href="/Admin/BlogDelete/@x.ID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Admin/BlogBring/@x.ID" class="btn btn-success">Update</a></td>
+            <td><a href="#" class="btn btn-info">Detail</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Admin/NewBlog/" class="btn btn-primary">New Blog</a>
